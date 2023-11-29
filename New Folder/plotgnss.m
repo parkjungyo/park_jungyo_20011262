@@ -32,9 +32,19 @@ lat=floor(str2num(lat)/100)+(str2num(lat)-(floor(str2num(lat)/100)*100))/60;
 lon=cell2mat(lon);
 lon=floor(str2num(lon)/100)+(str2num(lon)-(floor(str2num(lon)/100)*100))/60;
 
+% 
+% geoplot([lat(1:size(lat))],[lon(1:size(lon))])
+% geobasemap streets
 
-geoplot([lat(1:size(lat))],[lon(1:size(lon))])
-geobasemap streets
+h.Marker = ".";
+h.Color = "m";
+
+% geoplot([lat(1:size(lat))],[lon(1:size(lon))])
+% geobasemap topographic
+
+
+
+
 
 wm = webmap; % 웹 지도 생성
 wmline(wm, lat, lon); % 경로 추가
